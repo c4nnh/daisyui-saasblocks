@@ -1,5 +1,5 @@
 {
-  "name": "Basejump",
+  "name": "daisyui-saasblocks",
   "private": true,
   "scripts": {
     "dev": "next",
