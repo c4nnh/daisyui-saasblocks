@@ -43,7 +43,7 @@ const ContentHeader = ({ toggleSidebar }: Props) => {
           ))}
         </div>
       </div>
-      <div className="hidden lg:flex">
+      <div className="hidden lg:flex space-x-2">
         <select
           className="select select-bordered w-full max-w-xs"
           value={theme}
