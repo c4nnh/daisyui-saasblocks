@@ -12,7 +12,17 @@ module.exports = {
     extend: {},
   },
   daisyui: {
-    themes: ["luxury", "light", "dark"],
+    themes: [
+      "light",
+      "dark",
+      "luxury",
+      {
+        "midnight-envy": require("./themes/saas-blocks/midnight-envy"),
+      },
+      {
+        "eggshell-delights": require("./themes/saas-blocks/eggshell-delights"),
+      },
+    ],
   },
   plugins: [
     require("@tailwindcss/typography"),

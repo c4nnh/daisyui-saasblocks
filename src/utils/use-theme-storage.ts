@@ -5,8 +5,14 @@ import { useLocalStorage } from "react-use";
 
 const THEME_STORAGE_KEY = "basejump-theme";
 
-const themes: Theme[] = ["dark", "light", "luxury"];
-const defaultTheme: Theme = "luxury";
+const themes: Theme[] = [
+  "dark",
+  "light",
+  "luxury",
+  "eggshell-delights",
+  "midnight-envy",
+];
+const defaultTheme: Theme = "light";
 
 export default function useThemeStorage() {
   const [value, setValue, remove] = useLocalStorage(
