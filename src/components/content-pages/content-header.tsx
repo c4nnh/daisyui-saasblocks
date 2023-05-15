@@ -1,11 +1,13 @@
-import { Button, Navbar } from "react-daisyui";
-import Link from "next/link";
-import { useUser } from "@supabase/auth-helpers-react";
-import { useRouter } from "next/router";
 import Logo from "@/components/basejump-default-content/logo";
-import useTranslation from "next-translate/useTranslation";
-import { MenuIcon } from "@heroicons/react/outline";
+import { Theme } from "@/types/theme";
 import useHeaderNavigation from "@/utils/content/use-header-navigation";
+import useThemeStorage from "@/utils/use-theme-storage";
+import { MenuIcon } from "@heroicons/react/outline";
+import { useUser } from "@supabase/auth-helpers-react";
+import useTranslation from "next-translate/useTranslation";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { Button, Navbar } from "react-daisyui";
 
 type Props = {
   toggleSidebar: () => void;
@@ -14,6 +16,7 @@ type Props = {
 const ContentHeader = ({ toggleSidebar }: Props) => {
   const user = useUser();
   const router = useRouter();
+  const { availableThemes, theme, setTheme } = useThemeStorage();
 
   const { t } = useTranslation("content");
 
@@ -41,6 +44,17 @@ const ContentHeader = ({ toggleSidebar }: Props) => {
         </div>
       </div>
       <div className="hidden lg:flex">
+        <select
+          className="select select-bordered w-full max-w-xs"
+          value={theme}
+          onChange={(e) => setTheme(e.target.value as Theme)}
+        >
+          {availableThemes.map((item) => (
+            <option key={item} className="capitalize">
+              {item}
+            </option>
+          ))}
+        </select>
         {!!user ? (
           <Link href="/dashboard" passHref className="btn btn-ghost">
             {t("dashboard")}

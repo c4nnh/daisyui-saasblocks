@@ -1,9 +1,14 @@
-import { useLocalStorage } from "react-use";
-import { useTheme } from "react-daisyui";
+import { Theme } from "@/types/theme";
 import { useEffect } from "react";
+import { useTheme } from "react-daisyui";
+import { useLocalStorage } from "react-use";
 
 const THEME_STORAGE_KEY = "basejump-theme";
-export default function useThemeStorage(defaultTheme?: string) {
+
+const themes: Theme[] = ["dark", "light", "luxury"];
+const defaultTheme: Theme = "luxury";
+
+export default function useThemeStorage() {
   const [value, setValue, remove] = useLocalStorage(
     THEME_STORAGE_KEY,
     defaultTheme
@@ -14,9 +19,14 @@ export default function useThemeStorage(defaultTheme?: string) {
     setTheme(value);
   }, [value, setTheme]);
 
-  function setInternalTheme(theme: string) {
+  function setInternalTheme(theme: Theme) {
     setValue(theme);
   }
 
-  return { theme, setTheme: setInternalTheme, clearTheme: remove };
+  return {
+    theme,
+    availableThemes: themes,
+    setTheme: setInternalTheme,
+    clearTheme: remove,
+  };
 }
