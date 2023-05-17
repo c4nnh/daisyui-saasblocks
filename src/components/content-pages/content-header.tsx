@@ -1,5 +1,5 @@
 import Logo from "@/components/basejump-default-content/logo";
-import { Theme } from "@/types/theme";
+import { ThemeId } from "@/types/theme";
 import useHeaderNavigation from "@/utils/content/use-header-navigation";
 import useThemeStorage from "@/utils/use-theme-storage";
 import { MenuIcon } from "@heroicons/react/outline";
@@ -46,12 +46,12 @@ const ContentHeader = ({ toggleSidebar }: Props) => {
       <div className="hidden lg:flex space-x-2">
         <select
           className="select select-bordered w-full max-w-xs"
-          value={theme}
-          onChange={(e) => setTheme(e.target.value as Theme)}
+          value={theme.id}
+          onChange={(e) => setTheme(e.target.value as ThemeId)}
         >
           {availableThemes.map((item) => (
-            <option key={item} className="capitalize">
-              {item}
+            <option key={item.id} value={item.id}>
+              {item.name}
             </option>
           ))}
         </select>
