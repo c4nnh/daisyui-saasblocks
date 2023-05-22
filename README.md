@@ -17,14 +17,14 @@ yarn dev
 - **Eggshell delights:**
 
 ```json
-  primary: "#2563eb", // primary
-  secondary: "#626270", // secondary
-  accent: "#1e40af", // primary accent
-  neutral: "#efeff3",
-  info: "#0000ff",
-  success: "#008000",
-  warning: "#ffff00",
-  error: "#dc2626", // critical
+  "primary": "#2563eb", // primary
+  "secondary": "#626270", // secondary
+  "accent": "#1e40af", // primary accent
+  "neutral": "#efeff3",
+  "info": "#0000ff",
+  "success": "#008000",
+  "warning": "#ffff00",
+  "error": "#dc2626", // critical
   "base-100": "#efeff3", // muted-1
   "base-200": "#e1e1ea", // muted-2
   "base-300": "#dddde7", // muted-3
@@ -35,14 +35,14 @@ yarn dev
 - **Midnight envy**:
 
 ```json
-  primary: "#2563eb", // primary
-  secondary: "#424867", // secondary
-  accent: "#1e40af", // primary accent
-  neutral: "#252a41",
-  info: "#0000ff",
-  success: "#008000",
-  warning: "#ffff00",
-  error: "#dc2626", // critical
+  "primary": "#2563eb", // primary
+  "secondary": "#424867", // secondary
+  "accent": "#1e40af", // primary accent
+  "neutral": "#252a41",
+  "info": "#0000ff",
+  "success": "#008000",
+  "warning": "#ffff00",
+  "error": "#dc2626", // critical
   "base-100": "#1a1d2d", // layer-1
   "base-200": "#1e2235", // layer-2
   "base-300": "#252a41", // layer-3
