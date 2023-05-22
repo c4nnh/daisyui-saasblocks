@@ -1,16 +1,16 @@
 module.exports = {
   "color-scheme": "eggshell-delights",
-  primary: "#2563eb",
-  secondary: "#626270",
-  accent: "#1e40af",
+  primary: "#2563eb", // primary
+  secondary: "#626270", // secondary
+  accent: "#1e40af", // primary accent
   neutral: "#efeff3",
   info: "#0000ff",
   success: "#008000",
   warning: "#ffff00",
-  error: "#dc2626",
-  "base-100": "#efeff3",
-  "base-200": "#e1e1ea",
-  "base-300": "#dddde7",
+  error: "#dc2626", // critical
+  "base-100": "#efeff3", // muted-1
+  "base-200": "#e1e1ea", // muted-2
+  "base-300": "#dddde7", // muted-3
   "neutral-focus": "#343232",
   "--rounded-box": "1rem",
   "--rounded-btn": "0.5rem",

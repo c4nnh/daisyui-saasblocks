@@ -1,16 +1,16 @@
 module.exports = {
   "color-scheme": "midnight-envy",
-  primary: "#2563eb",
-  secondary: "#424867",
-  accent: "#1e40af",
+  primary: "#2563eb", // primary
+  secondary: "#424867", // secondary
+  accent: "#1e40af", // primary accent
   neutral: "#252a41",
   info: "#0000ff",
   success: "#008000",
   warning: "#ffff00",
-  error: "#dc2626",
-  "base-100": "#1a1d2d",
-  "base-200": "#1e2235",
-  "base-300": "#252a41",
+  error: "#dc2626", // critical
+  "base-100": "#1a1d2d", // layer-1
+  "base-200": "#1e2235", // layer-2
+  "base-300": "#252a41", // layer-3
   "neutral-focus": "#343232",
   "--rounded-box": "1rem",
   "--rounded-btn": "0.5rem",
